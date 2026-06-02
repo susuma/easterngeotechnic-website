@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+@source '../../resources/views/**/*.blade.php';
+@source '../../resources/js/**/*.js';
+
+
+:root {
+    --color-brand: #FD5D14;
+    --color-brand-dark: #FD5D14;
+    --color-deep: #020617;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
