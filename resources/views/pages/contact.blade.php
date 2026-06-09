@@ -27,14 +27,53 @@
                 </div>
             </div>
 
-            <form data-reveal="right" style="--reveal-delay: 120ms" action="#" method="POST" class="bg-slate-100 p-6 sm:p-8">
+            <form data-reveal="right" style="--reveal-delay: 120ms" action="{{ route('inquiries.store') }}" method="POST" class="bg-slate-100 p-6 sm:p-8">
                 @csrf
+                <input type="hidden" name="source" value="contact">
+                <input type="hidden" name="form_token" value="{{ encrypt(now()->timestamp) }}">
+                <div class="absolute -left-[10000px] top-auto h-px w-px overflow-hidden" aria-hidden="true">
+                    <label for="contact-website">Leave this field empty</label>
+                    <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
+                </div>
+
+                @if (session('inquiry_success'))
+                    <div class="mb-5 border border-green-200 bg-green-50 px-5 py-4 text-[15px] leading-6 text-green-800" role="status">
+                        {{ session('inquiry_success') }}
+                    </div>
+                @endif
+                @if (session('inquiry_error'))
+                    <div class="mb-5 border border-red-200 bg-red-50 px-5 py-4 text-[15px] leading-6 text-red-800" role="alert">
+                        {{ session('inquiry_error') }}
+                    </div>
+                @endif
+                @if ($errors->any())
+                    <div class="mb-5 border border-red-200 bg-red-50 px-5 py-4 text-[15px] leading-6 text-red-800" role="alert">
+                        Please check the highlighted fields and try again.
+                    </div>
+                @endif
+
                 <div class="grid gap-5 sm:grid-cols-2">
-                    <input type="text" name="name" placeholder="Your name" required class="w-full border border-slate-200 bg-white px-5 py-4 text-[#081a43] outline-none focus:border-[#FFA729]">
-                    <input type="email" name="email" placeholder="Email address" required class="w-full border border-slate-200 bg-white px-5 py-4 text-[#081a43] outline-none focus:border-[#FFA729]">
-                    <input type="tel" name="phone" placeholder="Phone number" class="w-full border border-slate-200 bg-white px-5 py-4 text-[#081a43] outline-none focus:border-[#FFA729]">
-                    <input type="text" name="service" placeholder="Service needed" class="w-full border border-slate-200 bg-white px-5 py-4 text-[#081a43] outline-none focus:border-[#FFA729]">
-                    <textarea name="message" rows="7" placeholder="Project details" required class="sm:col-span-2 w-full border border-slate-200 bg-white px-5 py-4 text-[#081a43] outline-none focus:border-[#FFA729]"></textarea>
+                    <div>
+                        <input type="text" name="name" value="{{ old('name') }}" placeholder="Your name*" autocomplete="name" required maxlength="100" class="w-full border bg-white px-5 py-4 text-[#081a43] outline-none focus:border-[#FFA729] {{ $errors->has('name') ? 'border-red-400' : 'border-slate-200' }}">
+                        @error('name') <p class="mt-2 text-sm text-red-700">{{ $message }}</p> @enderror
+                    </div>
+                    <div>
+                        <input type="email" name="email" value="{{ old('email') }}" placeholder="Email address*" autocomplete="email" required maxlength="254" class="w-full border bg-white px-5 py-4 text-[#081a43] outline-none focus:border-[#FFA729] {{ $errors->has('email') ? 'border-red-400' : 'border-slate-200' }}">
+                        @error('email') <p class="mt-2 text-sm text-red-700">{{ $message }}</p> @enderror
+                    </div>
+                    <div>
+                        <input type="tel" name="phone" value="{{ old('phone') }}" placeholder="Phone number" autocomplete="tel" maxlength="40" class="w-full border bg-white px-5 py-4 text-[#081a43] outline-none focus:border-[#FFA729] {{ $errors->has('phone') ? 'border-red-400' : 'border-slate-200' }}">
+                        @error('phone') <p class="mt-2 text-sm text-red-700">{{ $message }}</p> @enderror
+                    </div>
+                    <div>
+                        <input type="text" name="service" value="{{ old('service') }}" placeholder="Service needed" maxlength="150" class="w-full border bg-white px-5 py-4 text-[#081a43] outline-none focus:border-[#FFA729] {{ $errors->has('service') ? 'border-red-400' : 'border-slate-200' }}">
+                        @error('service') <p class="mt-2 text-sm text-red-700">{{ $message }}</p> @enderror
+                    </div>
+                    <div class="sm:col-span-2">
+                        <textarea name="message" rows="7" placeholder="Project details*" required minlength="15" maxlength="5000" class="w-full border bg-white px-5 py-4 text-[#081a43] outline-none focus:border-[#FFA729] {{ $errors->has('message') ? 'border-red-400' : 'border-slate-200' }}">{{ old('message') }}</textarea>
+                        @error('message') <p class="mt-2 text-sm text-red-700">{{ $message }}</p> @enderror
+                        @error('form_token') <p class="mt-2 text-sm text-red-700">{{ $message }}</p> @enderror
+                    </div>
                     <button type="submit" class="sm:col-span-2 inline-flex justify-center bg-[#FFA729] px-7 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white transition hover:bg-[#D98200]">Send Inquiry</button>
                 </div>
             </form>

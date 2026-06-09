@@ -49,6 +49,22 @@ html.motion-ready [data-reveal].is-revealed {
     transform: translate3d(0, 0, 0) scale(1);
 }
 
+[data-scroll-top] {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate3d(0, 18px, 0);
+    transition:
+        opacity 250ms ease,
+        transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
+        background-color 200ms ease;
+}
+
+[data-scroll-top].is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate3d(0, 0, 0);
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -58,6 +74,10 @@ html.motion-ready [data-reveal].is-revealed {
     html.motion-ready [data-reveal] {
         opacity: 1;
         transform: none;
+        transition: none;
+    }
+
+    [data-scroll-top] {
         transition: none;
     }
 }

@@ -339,12 +339,46 @@
                         <div class="mx-[10px] bg-[#081a43] px-[17px] py-[17px] text-center">
                             <h3 class="text-[22px] font-bold uppercase text-white">Contact &amp; Hire Us</h3>
                         </div>
-                        <form action="#" method="POST" class="mx-[10px] mt-[15px]">
+                        @if (session('inquiry_success'))
+                            <div class="mx-[10px] mt-4 border border-green-200 bg-green-50 px-5 py-4 text-[15px] leading-6 text-green-800" role="status">
+                                {{ session('inquiry_success') }}
+                            </div>
+                        @endif
+                        @if (session('inquiry_error'))
+                            <div class="mx-[10px] mt-4 border border-red-200 bg-red-50 px-5 py-4 text-[15px] leading-6 text-red-800" role="alert">
+                                {{ session('inquiry_error') }}
+                            </div>
+                        @endif
+                        @if ($errors->any())
+                            <div class="mx-[10px] mt-4 border border-red-200 bg-red-50 px-5 py-4 text-[15px] leading-6 text-red-800" role="alert">
+                                Please check the highlighted fields and try again.
+                            </div>
+                        @endif
+                        <form action="{{ route('inquiries.store') }}" method="POST" class="mx-[10px] mt-[15px]">
                             @csrf
-                            <div class="mb-5"><input name="name" type="text" placeholder="Your Name*" required class="w-full border-0 bg-[#f4f4f4] px-5 py-5 text-[16px] text-[#081a43] outline-none"></div>
-                            <div class="mb-5"><input name="email" type="email" placeholder="Your Email*" required class="w-full border-0 bg-[#f4f4f4] px-5 py-5 text-[16px] text-[#081a43] outline-none"></div>
-                            <div class="mb-5"><input name="phone" type="tel" placeholder="Your Number*" required class="w-full border-0 bg-[#f4f4f4] px-5 py-5 text-[16px] text-[#081a43] outline-none"></div>
-                            <div class="mb-5"><textarea name="message" rows="6" placeholder="Enter your message" class="w-full border-0 bg-[#f4f4f4] px-5 py-5 text-[16px] text-[#081a43] outline-none"></textarea></div>
+                            <input type="hidden" name="source" value="home">
+                            <input type="hidden" name="form_token" value="{{ encrypt(now()->timestamp) }}">
+                            <div class="absolute -left-[10000px] top-auto h-px w-px overflow-hidden" aria-hidden="true">
+                                <label for="home-website">Leave this field empty</label>
+                                <input id="home-website" name="website" type="text" tabindex="-1" autocomplete="off">
+                            </div>
+                            <div class="mb-5">
+                                <input name="name" type="text" value="{{ old('name') }}" placeholder="Your Name*" autocomplete="name" required maxlength="100" class="w-full border bg-[#f4f4f4] px-5 py-5 text-[16px] text-[#081a43] outline-none {{ $errors->has('name') ? 'border-red-400' : 'border-transparent' }}">
+                                @error('name') <p class="mt-2 text-sm text-red-700">{{ $message }}</p> @enderror
+                            </div>
+                            <div class="mb-5">
+                                <input name="email" type="email" value="{{ old('email') }}" placeholder="Your Email*" autocomplete="email" required maxlength="254" class="w-full border bg-[#f4f4f4] px-5 py-5 text-[16px] text-[#081a43] outline-none {{ $errors->has('email') ? 'border-red-400' : 'border-transparent' }}">
+                                @error('email') <p class="mt-2 text-sm text-red-700">{{ $message }}</p> @enderror
+                            </div>
+                            <div class="mb-5">
+                                <input name="phone" type="tel" value="{{ old('phone') }}" placeholder="Your Number*" autocomplete="tel" required maxlength="40" class="w-full border bg-[#f4f4f4] px-5 py-5 text-[16px] text-[#081a43] outline-none {{ $errors->has('phone') ? 'border-red-400' : 'border-transparent' }}">
+                                @error('phone') <p class="mt-2 text-sm text-red-700">{{ $message }}</p> @enderror
+                            </div>
+                            <div class="mb-5">
+                                <textarea name="message" rows="6" placeholder="Enter your message*" required minlength="15" maxlength="5000" class="w-full border bg-[#f4f4f4] px-5 py-5 text-[16px] text-[#081a43] outline-none {{ $errors->has('message') ? 'border-red-400' : 'border-transparent' }}">{{ old('message') }}</textarea>
+                                @error('message') <p class="mt-2 text-sm text-red-700">{{ $message }}</p> @enderror
+                                @error('form_token') <p class="mt-2 text-sm text-red-700">{{ $message }}</p> @enderror
+                            </div>
                             <button type="submit" class="inline-flex items-center justify-center bg-[#FFA729] px-10 py-4 text-[16px] font-bold uppercase text-white transition hover:bg-[#D98200]">Submit Message</button>
                         </form>
                     </div>

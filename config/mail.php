@@ -115,4 +115,6 @@ return [
         'name' => env('MAIL_FROM_NAME', env('APP_NAME', 'Laravel')),
     ],
 
+    'inquiries_to' => env('INQUIRY_MAIL_TO', 'projects@easterngeotechnics.co.tz'),
+
 ];

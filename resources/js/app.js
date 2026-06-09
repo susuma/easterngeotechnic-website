@@ -83,3 +83,28 @@ if (document.readyState === 'loading') {
 } else {
     initialiseRevealAnimations();
 }
+
+const initialiseScrollToTop = () => {
+    const button = document.querySelector('[data-scroll-top]');
+
+    if (!button) {
+        return;
+    }
+
+    const updateVisibility = () => {
+        button.classList.toggle('is-visible', window.scrollY > 500);
+    };
+
+    button.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    window.addEventListener('scroll', updateVisibility, { passive: true });
+    updateVisibility();
+};
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initialiseScrollToTop);
+} else {
+    initialiseScrollToTop();
+}
