@@ -251,20 +251,67 @@
         </div>
     </section>
 
-    <section class="relative overflow-hidden bg-[#f3f3f3] py-0">
-        <div class="pointer-events-none absolute left-0 right-0 top-0 z-30 h-[120px] lg:h-[140px]">
+    <section id="delivery" class="relative overflow-hidden bg-white">
+        <div class="pointer-events-none absolute left-0 right-0 top-0 z-30 h-[100px] lg:h-[120px]">
             <img src="{{ asset('assets/images/builderon-img21.png') }}" alt="" class="h-full w-full rotate-180 object-cover object-top">
         </div>
-        <div class="relative min-h-[400px]">
-            <div class="absolute inset-0">
-                <img src="{{ asset('assets/images/builderon-img43.jpg') }}" alt="" class="h-full w-full object-cover">
-                <div class="absolute inset-0 bg-black/35"></div>
+
+        <div class="pointer-events-none absolute inset-0 opacity-[0.08]">
+            <img src="{{ asset('assets/images/builderon-img055.png') }}" alt="" class="h-full w-full object-cover object-center">
+        </div>
+
+        <div class="relative mx-auto max-w-[1040px] px-4 pb-32 pt-44 sm:px-6 lg:pb-44 lg:pt-48">
+            <div class="grid items-start gap-10 lg:grid-cols-[1fr_auto]">
+                <div class="max-w-[680px]">
+                    <p class="inline-block border border-[#FFA729] px-4 py-2 text-[14px] font-black uppercase leading-none text-[#D98200]">
+                        How We Deliver
+                    </p>
+                    <h2 class="mt-7 text-[30px] font-black uppercase leading-[1.08] text-[#081a43] lg:text-[38px]">
+                        From Site Assessment To Reliable Ground Data
+                    </h2>
+                    <p class="mt-5 max-w-[660px] text-[16px] leading-[1.75] text-[#4d4d4d]">
+                        Our field teams combine careful planning, practical investigation, and dependable testing to give project teams the information needed for confident engineering decisions.
+                    </p>
+                </div>
+                <div class="lg:pt-3">
+                    <a href="{{ route('projects') }}" class="inline-flex items-center justify-center bg-[#FFA729] px-7 py-5 text-[15px] font-black uppercase leading-none text-white transition hover:bg-[#D98200]">
+                        Explore Projects
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-10 grid gap-8 md:grid-cols-3">
+                @foreach ([
+                    ['number' => '01', 'image' => 'builderon-img34.jpg', 'title' => 'Assess The Site', 'text' => 'We review project needs and assess field conditions before investigation work begins.'],
+                    ['number' => '02', 'image' => 'builderon-img35.jpg', 'title' => 'Investigate The Ground', 'text' => 'Our teams drill, sample, and document subsurface conditions using suitable field methods.'],
+                    ['number' => '03', 'image' => 'builderon-img30.jpg', 'title' => 'Test And Verify', 'text' => 'Field testing and measured results support clear, practical engineering recommendations.'],
+                ] as $step)
+                    <article class="group flex h-full flex-col overflow-hidden border border-[#FFA729]/55 bg-white">
+                        <div class="relative overflow-hidden" style="aspect-ratio: 4 / 3;">
+                            <img src="{{ asset('assets/images/' . $step['image']) }}" alt="{{ $step['title'] }}" class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="flex flex-1 flex-col px-7 pb-8 pt-7">
+                            <p class="text-[13px] font-black uppercase leading-none text-[#D98200]">Step {{ $step['number'] }}</p>
+                            <h3 class="mt-3 text-[20px] font-black uppercase leading-tight text-[#081a43]">{{ $step['title'] }}</h3>
+                            <p class="mt-4 text-[15px] leading-[1.75] text-[#4d4d4d]">{{ $step['text'] }}</p>
+                        </div>
+                    </article>
+                @endforeach
             </div>
         </div>
     </section>
 
-    <section class="bg-white px-[15px] pb-[100px]" style="margin-top: -149px;">
-        <div class="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
+    <section class="relative overflow-hidden bg-white px-[15px] pb-[120px]">
+        <div class="absolute left-0 right-0 top-0 h-[390px] lg:h-[440px]">
+            <img src="{{ asset('assets/images/builderon-img43.jpg') }}" alt="" class="h-full w-full object-cover object-center">
+            <div class="absolute inset-0 bg-black/45"></div>
+        </div>
+
+        <div class="pointer-events-none absolute left-0 right-0 top-0 z-10 h-[120px] -translate-y-[1px] lg:h-[170px]">
+            <img src="{{ asset('assets/images/builderon-img21.png') }}" alt="" class="h-full w-full rotate-180 object-cover object-top">
+        </div>
+
+        <div class="relative z-20 mx-auto max-w-[1180px] px-4 pt-[220px] sm:px-6 lg:px-8 lg:pt-[360px]">
             <div class="grid gap-10 lg:grid-cols-2">
                 <div class="z-20 lg:mr-[50px]">
                     <div class="grid grid-cols-2">

@@ -45,7 +45,7 @@
 
     <x-page-hero title="Services" subtitle="Engineering services delivered in-house and through trusted associations." />
 
-    <section class="bg-white py-20 lg:py-24">
+    <section class="bg-white pt-20 lg:pt-24 pb-36">
         <div class="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl">
                 <p class="inline-block border-2 border-[#FFA729] px-4 py-2 text-sm font-black uppercase text-[#FFA729]">What We Do</p>

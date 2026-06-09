@@ -34,7 +34,7 @@
         </div>
     </section>
 
-    <section class="bg-slate-100 py-20 lg:py-24">
+    <section class="bg-slate-100 pt-20 lg:pt-24 pb-36">
         <div class="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl">
                 <p class="inline-block border border-[#FFA729] px-4 py-2 text-sm font-black uppercase text-[#D98200]">Testing Equipment</p>

@@ -6,7 +6,7 @@
 @section('content')
     <x-page-hero title="Contact Us" subtitle="Talk to EGL about your investigation, drilling, or testing assignment." />
 
-    <section class="bg-white py-20 lg:py-24">
+    <section class="bg-white pt-20 lg:pt-24 pb-36">
         <div class="mx-auto grid max-w-[1180px] gap-12 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
             <div>
                 <p class="inline-block border-2 border-[#FFA729] px-4 py-2 text-sm font-black uppercase text-[#FFA729]">Get In Touch</p>
