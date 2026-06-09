@@ -17,7 +17,7 @@
         <div class="relative mx-auto flex max-w-7xl  px-4 pt-12 pb-12 sm:px-6 lg:px-8 lg:py-16 min-h-[300px] lg:min-h-[300px] xl:min-h-[300px]">
             <div class="w-full text-center">
                 <div class="mx-auto max-w-4xl">
-                    <h3 class="text-4xl font-black uppercase leading-[0.95] sm:text-3xl lg:text-5xl">
+                    <h3 data-hero-reveal style="--reveal-delay: 120ms" class="text-4xl font-black uppercase leading-[0.95] sm:text-3xl lg:text-5xl">
                         Blog
                     </h3>
                 </div>

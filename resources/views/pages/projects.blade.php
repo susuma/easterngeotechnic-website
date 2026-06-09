@@ -19,13 +19,13 @@
 
     <section class="bg-white pt-20 lg:pt-24 pb-36">
         <div class="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl">
+            <div data-reveal="up" class="max-w-3xl">
                 <p class="inline-block border-2 border-[#FFA729] px-4 py-2 text-sm font-black uppercase text-[#FFA729]">Project Support</p>
                 <h1 class="mt-6 text-3xl font-black uppercase leading-tight text-[#081a43] sm:text-4xl">Field investigation capability for early-stage and active projects</h1>
             </div>
             <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 @foreach ($projects as $project)
-                    <article class="overflow-hidden border border-slate-200 bg-white shadow-sm">
+                    <article data-reveal="up" style="--reveal-delay: {{ ($loop->index % 3) * 100 }}ms" class="overflow-hidden border border-slate-200 bg-white shadow-sm">
                         <img src="{{ asset('assets/images/' . $project['image']) }}" alt="{{ $project['title'] }}" class="h-64 w-full object-cover">
                         <div class="p-6">
                             <h2 class="text-xl font-black uppercase text-[#081a43]">{{ $project['title'] }}</h2>

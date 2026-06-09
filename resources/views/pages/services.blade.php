@@ -47,7 +47,7 @@
 
     <section class="bg-white pt-20 lg:pt-24 pb-36">
         <div class="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl">
+            <div data-reveal="up" class="max-w-3xl">
                 <p class="inline-block border-2 border-[#FFA729] px-4 py-2 text-sm font-black uppercase text-[#FFA729]">What We Do</p>
                 <h1 class="mt-6 text-3xl font-black uppercase leading-tight text-[#081a43] sm:text-4xl">Ground investigation services for reliable design and construction decisions</h1>
                 <p class="mt-5 text-lg leading-8 text-slate-600">EGL offers a range of engineering services either entirely in-house or in association with specialist partners.</p>
@@ -55,7 +55,7 @@
 
             <div class="mt-12 grid gap-6 lg:grid-cols-3">
                 @foreach ($groups as $group)
-                    <article class="border border-slate-200 bg-white p-7 shadow-sm">
+                    <article data-reveal="up" style="--reveal-delay: {{ $loop->index * 110 }}ms" class="border border-slate-200 bg-white p-7 shadow-sm">
                         <i class="fas {{ $group['icon'] }} text-4xl text-[#FFA729]" aria-hidden="true"></i>
                         <h2 class="mt-5 text-2xl font-black uppercase leading-tight text-[#081a43]">{{ $group['title'] }}</h2>
                         <ul class="mt-6 space-y-4">

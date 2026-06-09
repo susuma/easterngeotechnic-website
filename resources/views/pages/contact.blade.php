@@ -8,7 +8,7 @@
 
     <section class="bg-white pt-20 lg:pt-24 pb-36">
         <div class="mx-auto grid max-w-[1180px] gap-12 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-            <div>
+            <div data-reveal="left">
                 <p class="inline-block border-2 border-[#FFA729] px-4 py-2 text-sm font-black uppercase text-[#FFA729]">Get In Touch</p>
                 <h1 class="mt-6 text-3xl font-black uppercase leading-tight text-[#081a43] sm:text-4xl">Start with the right ground information</h1>
                 <div class="mt-8 space-y-5">
@@ -27,7 +27,7 @@
                 </div>
             </div>
 
-            <form action="#" method="POST" class="bg-slate-100 p-6 sm:p-8">
+            <form data-reveal="right" style="--reveal-delay: 120ms" action="#" method="POST" class="bg-slate-100 p-6 sm:p-8">
                 @csrf
                 <div class="grid gap-5 sm:grid-cols-2">
                     <input type="text" name="name" placeholder="Your name" required class="w-full border border-slate-200 bg-white px-5 py-4 text-[#081a43] outline-none focus:border-[#FFA729]">

@@ -55,14 +55,14 @@
         <div class="relative mx-auto flex min-h-[800px] max-w-7xl items-center px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
             <div class="w-full text-center">
                 <div class="mx-auto max-w-4xl">
-                    <p class="text-sm font-black uppercase tracking-[0.32em] text-[#FFA729]">Geotechnical Investigation Services Provider</p>
-                    <h1 class="mt-6 text-4xl font-black uppercase leading-[0.98] sm:text-5xl lg:text-6xl">
+                    <p data-hero-reveal style="--reveal-delay: 80ms" class="text-sm font-black uppercase tracking-[0.32em] text-[#FFA729]">Geotechnical Investigation Services Provider</p>
+                    <h1 data-hero-reveal style="--reveal-delay: 170ms" class="mt-6 text-4xl font-black uppercase leading-[0.98] sm:text-5xl lg:text-6xl">
                         Professional Geotechnical, Drilling & Testing Services Across Tanzania
                     </h1>
-                    <p class="mx-auto mt-6 max-w-3xl text-base leading-8 text-slate-100 lg:text-lg">
+                    <p data-hero-reveal style="--reveal-delay: 270ms" class="mx-auto mt-6 max-w-3xl text-base leading-8 text-slate-100 lg:text-lg">
                         Eastern Geotechnics Limited provides reliable geotechnical investigation, borehole drilling, in-situ testing, geophysics study, and engineering support for project teams.
                     </p>
-                    <div class="mt-10 flex flex-wrap justify-center gap-4">
+                    <div data-hero-reveal style="--reveal-delay: 370ms" class="mt-10 flex flex-wrap justify-center gap-4">
                         <a href="#services" class="inline-flex items-center justify-center bg-[#FFA729] px-8 py-4 text-xs font-bold uppercase tracking-[0.22em] text-white transition hover:bg-[#D98200]">Explore Services</a>
                         <a href="{{ route('contact') }}" class="inline-flex items-center justify-center border border-white/35 px-8 py-4 text-xs font-bold uppercase tracking-[0.22em] text-white transition hover:bg-white/10">Request Consultation</a>
                     </div>
@@ -78,7 +78,7 @@
     <section id="services" class="relative overflow-hidden bg-[#FFA729] py-16 text-white lg:pt-0 lg:pb-24">
         <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lg:min-h-[450px]">
             <div class="grid gap-10 lg:grid-cols-[1fr_2fr] lg:gap-8">
-                <div class="flex">
+                <div data-reveal="left" class="flex">
                     <div class="my-auto max-w-md">
                         <h2 class="text-3xl font-black uppercase leading-tight sm:text-4xl">Why choose us<br>for projects?</h2>
                         <p class="mt-5 text-base leading-8 text-orange-50/95">
@@ -91,7 +91,7 @@
                 <div class="space-y-5">
                     <div class="grid gap-5 sm:grid-cols-2">
                         @foreach ($services as $service)
-                            <article class="bg-slate-950/95 p-6 shadow-2xl">
+                            <article data-reveal="up" style="--reveal-delay: {{ $loop->index * 90 }}ms" class="bg-slate-950/95 p-6 shadow-2xl">
                                 <div class="flex items-start gap-4">
                                     <img src="{{ asset('assets/images/' . $service['icon']) }}" alt="" class="h-16 w-16 shrink-0 object-contain">
                                     <div>
@@ -120,18 +120,18 @@
 
         <div class="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
             <div class="relative lg:min-h-[760px]">
-                <div class="relative z-10 max-w-full lg:absolute lg:left-0 lg:top-0 lg:w-[456px]">
+                <div data-reveal="left" class="relative z-10 max-w-full lg:absolute lg:left-0 lg:top-0 lg:w-[456px]">
                     <img src="{{ asset('assets/images/builderon-img17.jpg') }}" alt="Eastern Geotechnics field investigation" class="h-auto w-full object-cover">
                 </div>
 
-                <div class="mt-6 bg-[#FFA729] px-8 py-12 text-white lg:absolute lg:right-0 lg:top-[60px] lg:z-10 lg:mt-0 lg:flex lg:h-[430px] lg:w-[520px] lg:items-center lg:justify-center">
+                <div data-reveal="right" style="--reveal-delay: 120ms" class="mt-6 bg-[#FFA729] px-8 py-12 text-white lg:absolute lg:right-0 lg:top-[60px] lg:z-10 lg:mt-0 lg:flex lg:h-[430px] lg:w-[520px] lg:items-center lg:justify-center">
                     <div class="max-w-[360px]">
                         <p class="text-sm font-black uppercase tracking-[0.24em] text-orange-100">Established 2024</p>
                         <h3 class="mt-5 text-4xl font-black uppercase leading-tight">Fast-growing Tanzanian geotechnical contractor</h3>
                     </div>
                 </div>
 
-                <div class="relative z-20 mt-6 bg-white px-7 py-10 shadow-[0_18px_45px_rgba(0,0,0,0.12)] lg:absolute lg:left-[48px] lg:top-[195px] lg:mt-0 lg:w-[620px] lg:px-11 lg:py-12">
+                <div data-reveal="up" style="--reveal-delay: 220ms" class="relative z-20 mt-6 bg-white px-7 py-10 shadow-[0_18px_45px_rgba(0,0,0,0.12)] lg:absolute lg:left-[48px] lg:top-[195px] lg:mt-0 lg:w-[620px] lg:px-11 lg:py-12">
                     <p class="inline-block border-2 border-[#FFA729] px-4 py-2 text-[15px] font-black uppercase leading-none text-[#FFA729]">Introduction</p>
                     <h2 class="mt-7 text-[32px] font-black uppercase leading-[1.05] text-[#081a43] lg:text-[44px]">Engineering confidence from the ground up</h2>
                     <p class="mt-6 max-w-[500px] text-[18px] leading-[1.65] text-[#555]">
@@ -164,7 +164,7 @@
 
             <div class="relative z-20 mx-auto flex min-h-[700px] max-w-[1180px] items-center px-4 pt-28 sm:px-6 lg:px-8">
                 <div class="grid w-full items-center gap-8 lg:grid-cols-[1.3fr_0.7fr]">
-                    <div class="relative w-full max-w-[620px] bg-[#FFA729] px-8 py-10 shadow-[0_18px_45px_rgba(0,0,0,0.16)] lg:px-10">
+                    <div data-reveal="left" class="relative w-full max-w-[620px] bg-[#FFA729] px-8 py-10 shadow-[0_18px_45px_rgba(0,0,0,0.16)] lg:px-10">
                         <div class="pointer-events-none absolute bottom-0 right-0 z-0 opacity-60">
                             <img src="{{ asset('assets/images/builderon-img22.png') }}" alt="" class="h-auto w-[190px] object-contain">
                         </div>
@@ -176,7 +176,7 @@
                             <a href="mailto:projects@easterngeotechnics.co.tz" class="mt-4 block break-words text-[24px] font-black leading-tight text-white hover:opacity-90">projects@easterngeotechnics.co.tz</a>
                         </div>
                     </div>
-                    <div class="relative hidden min-h-[640px] lg:block">
+                    <div data-reveal="right" style="--reveal-delay: 140ms" class="relative hidden min-h-[640px] lg:block">
                         <img src="{{ asset('assets/images/builderon-img23-african.png') }}" alt="" class="absolute bottom-0 left-1/2 z-20 max-h-[610px] w-auto -translate-x-1/2 object-contain">
                     </div>
                 </div>
@@ -190,7 +190,7 @@
 
     <section id="projects" class="relative overflow-hidden bg-white py-10 lg:py-14">
         <div class="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
-            <div class="mx-auto max-w-[760px] text-center">
+            <div data-reveal="up" class="mx-auto max-w-[760px] text-center">
                 <p class="inline-block border border-[#FFA729] px-4 py-2 text-[14px] font-black uppercase text-[#D98200]">Project Support</p>
                 <h2 class="mt-6 text-[38px] font-black uppercase leading-none text-[#081a43] lg:text-[56px]">Ground Investigation Capability</h2>
                 <p class="mx-auto mt-5 max-w-[760px] text-[16px] leading-[1.65] text-[#4d4d4d]">
@@ -198,7 +198,7 @@
                 </p>
             </div>
 
-            <div class="mt-10 flex flex-wrap items-center justify-center gap-x-2 gap-y-4">
+            <div data-reveal="up" style="--reveal-delay: 100ms" class="mt-10 flex flex-wrap items-center justify-center gap-x-2 gap-y-4">
                 @foreach (['All', 'Drilling', 'Testing', 'Geophysics'] as $filter)
                     <span class="{{ $loop->first ? 'bg-[#FFA729] text-white' : 'bg-white text-slate-700' }} px-5 py-3 text-xs font-bold uppercase tracking-[0.24em] shadow-sm ring-1 ring-slate-200">{{ $filter }}</span>
                 @endforeach
@@ -208,7 +208,7 @@
                 @foreach (array_chunk($projects, 2) as $column)
                     <div class="grid gap-5 {{ $loop->last ? 'md:col-span-2 xl:col-span-1' : '' }}">
                         @foreach ($column as $project)
-                            <a href="{{ route('projects') }}" class="group relative block overflow-hidden">
+                            <a href="{{ route('projects') }}" data-reveal="scale" style="--reveal-delay: {{ $loop->index * 80 }}ms" class="group relative block overflow-hidden">
                                 <img src="{{ asset('assets/images/' . $project['image']) }}" alt="{{ $project['title'] }}" class="h-auto w-full object-cover">
                                 <div class="absolute inset-0 bg-slate-950/55 opacity-0 transition duration-300 group-hover:opacity-100"></div>
                                 <div class="absolute inset-0 flex items-center justify-center px-6 text-center opacity-0 transition duration-300 group-hover:opacity-100">
@@ -229,19 +229,19 @@
         <div class="absolute inset-0 bg-black/75"></div>
         <div class="relative mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
             <div class="grid gap-5 md:grid-cols-3">
-                <div class="border-2 border-[#FFA729]/50 bg-[#030f27]/70 p-10 text-center">
+                <div data-reveal="up" class="border-2 border-[#FFA729]/50 bg-[#030f27]/70 p-10 text-center">
                     <i class="fas fa-calendar-check text-[56px] text-[#FFA729]" aria-hidden="true"></i>
-                    <div class="mt-6 text-[34px] font-black leading-none text-white">2024</div>
+                    <div data-counter="2024" data-counter-duration="950" class="mt-6 text-[34px] font-black leading-none text-white">2024</div>
                     <div class="mt-3 text-[16px] text-white">Established</div>
                 </div>
-                <div class="border-2 border-[#FFA729]/50 bg-[#030f27]/70 p-10 text-center">
+                <div data-reveal="up" style="--reveal-delay: 100ms" class="border-2 border-[#FFA729]/50 bg-[#030f27]/70 p-10 text-center">
                     <i class="fas fa-ruler-vertical text-[56px] text-[#FFA729]" aria-hidden="true"></i>
-                    <div class="mt-6 text-[34px] font-black leading-none text-white">300m</div>
+                    <div data-counter="300" data-counter-suffix="m" data-counter-duration="850" class="mt-6 text-[34px] font-black leading-none text-white">300m</div>
                     <div class="mt-3 text-[16px] text-white">Drilling Capacity</div>
                 </div>
-                <div class="border-2 border-[#FFA729]/50 bg-[#030f27]/70 p-10 text-center">
+                <div data-reveal="up" style="--reveal-delay: 200ms" class="border-2 border-[#FFA729]/50 bg-[#030f27]/70 p-10 text-center">
                     <i class="fas fa-people-carry-box text-[56px] text-[#FFA729]" aria-hidden="true"></i>
-                    <div class="mt-6 text-[34px] font-black leading-none text-white">3</div>
+                    <div data-counter="3" data-counter-duration="650" class="mt-6 text-[34px] font-black leading-none text-white">3</div>
                     <div class="mt-3 text-[16px] text-white">Deployable Teams</div>
                 </div>
             </div>
@@ -259,7 +259,7 @@
 
         <div class="relative mx-auto max-w-[1040px] px-4 pb-8 pt-8 sm:px-6 lg:pb-12 lg:pt-12">
             <div class="grid items-start gap-10 lg:grid-cols-[1fr_auto]">
-                <div class="max-w-[680px]">
+                <div data-reveal="up" class="max-w-[680px]">
                     <p class="inline-block border border-[#FFA729] px-4 py-2 text-[14px] font-black uppercase leading-none text-[#D98200]">
                         How We Deliver
                     </p>
@@ -270,7 +270,7 @@
                         Our field teams combine careful planning, practical investigation, and dependable testing to give project teams the information needed for confident engineering decisions.
                     </p>
                 </div>
-                <div class="lg:pt-3">
+                <div data-reveal="right" style="--reveal-delay: 100ms" class="lg:pt-3">
                     <a href="{{ route('projects') }}" class="inline-flex items-center justify-center bg-[#FFA729] px-7 py-5 text-[15px] font-black uppercase leading-none text-white transition hover:bg-[#D98200]">
                         Explore Projects
                     </a>
@@ -283,7 +283,7 @@
                     ['number' => '02', 'image' => 'builderon-img35.jpg', 'title' => 'Investigate The Ground', 'text' => 'Our teams drill, sample, and document subsurface conditions using suitable field methods.'],
                     ['number' => '03', 'image' => 'builderon-img30.jpg', 'title' => 'Test And Verify', 'text' => 'Field testing and measured results support clear, practical engineering recommendations.'],
                 ] as $step)
-                    <article class="group flex h-full flex-col overflow-hidden border border-[#FFA729]/55 bg-white">
+                    <article data-reveal="up" style="--reveal-delay: {{ $loop->index * 100 }}ms" class="group flex h-full flex-col overflow-hidden border border-[#FFA729]/55 bg-white">
                         <div class="relative overflow-hidden" style="aspect-ratio: 4 / 3;">
                             <img src="{{ asset('assets/images/' . $step['image']) }}" alt="{{ $step['title'] }}" class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
                         </div>
@@ -311,7 +311,7 @@
 
         <div class="relative z-20 mx-auto max-w-[1180px] px-4 pt-[220px] sm:px-6 lg:px-8 lg:pt-[360px]">
             <div class="grid gap-10 lg:grid-cols-2">
-                <div class="z-20 lg:mr-[50px]">
+                <div data-reveal="left" class="z-20 lg:mr-[50px]">
                     <div class="grid grid-cols-2">
                         <div class="min-h-[168px] bg-cover bg-top" style="background-image: url('{{ asset('assets/images/builderon-img44.jpg') }}');"></div>
                         <div class="flex items-center bg-[#FFA729] px-[24px] py-[36px]">
@@ -334,7 +334,7 @@
                     </div>
                 </div>
 
-                <div class="z-20">
+                <div data-reveal="right" style="--reveal-delay: 130ms" class="z-20">
                     <div class="bg-white px-[28px] py-[42px] shadow-[0_0_30px_0_rgba(0,0,0,0.15)] lg:px-[40px] lg:py-[50px]">
                         <div class="mx-[10px] bg-[#081a43] px-[17px] py-[17px] text-center">
                             <h3 class="text-[22px] font-bold uppercase text-white">Contact &amp; Hire Us</h3>

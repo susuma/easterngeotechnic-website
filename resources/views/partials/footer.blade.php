@@ -1,7 +1,7 @@
 <footer class="relative -mt-[80px] bg-transparent text-white">
     {{-- Project enquiry band --}}
     <section class="relative z-20">
-        <div class="relative mx-auto max-w-[1120px] overflow-hidden bg-[#FFA729] px-4 py-8 sm:px-8 lg:px-12 lg:py-10">
+        <div data-reveal="up" class="relative mx-auto max-w-[1120px] overflow-hidden bg-[#FFA729] px-4 py-8 sm:px-8 lg:px-12 lg:py-10">
             <div class="pointer-events-none absolute inset-0 opacity-[0.06]">
                 <img src="{{ asset('assets/images/builderon-img32.jpg') }}" alt="" class="h-full w-full object-cover object-center">
             </div>
@@ -66,7 +66,7 @@
 
         <div class="relative mx-auto max-w-[1180px] px-4 py-16 sm:px-6 lg:px-8">
             <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-                <div>
+                <div data-reveal="up" style="--reveal-delay: 80ms">
                     <a href="{{ route('home') }}" class="inline-block">
                         <img src="{{ asset('assets/images/egl-logo.jpg') }}" alt="Eastern Geotechnics" class="h-[82px] w-[240px] bg-white object-contain px-2">
                     </a>
@@ -90,7 +90,7 @@
                     </div>
                 </div>
 
-                <div>
+                <div data-reveal="up" style="--reveal-delay: 160ms">
                     <h2 class="text-[18px] font-bold uppercase text-[#FFA729]">Contact Information</h2>
                     <ul class="mt-6 space-y-4 text-[14px] leading-7 text-slate-300">
                         <li>Phone: +255 760 594 570</li>
@@ -100,7 +100,7 @@
                     </ul>
                 </div>
 
-                <div>
+                <div data-reveal="up" style="--reveal-delay: 240ms">
                     <h2 class="text-[18px] font-bold uppercase text-[#FFA729]">Useful Links</h2>
                     <ul class="mt-6 space-y-4 text-[14px] text-slate-300">
                         <li><a href="{{ route('about') }}" class="transition hover:text-[#FFA729]">About Us</a></li>
@@ -111,7 +111,7 @@
                     </ul>
                 </div>
 
-                <div>
+                <div data-reveal="up" style="--reveal-delay: 320ms">
                     <h2 class="text-[18px] font-bold uppercase text-[#FFA729]">Core Services</h2>
                     <ul class="mt-6 space-y-4 text-[14px] text-slate-300">
                         <li>Foundation investigation</li>
