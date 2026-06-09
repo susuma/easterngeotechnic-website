@@ -70,7 +70,7 @@
             </div>
         </div>
 
-        <div class="absolute bottom-0 left-0 right-0 z-10 h-[120px] lg:h-[170px] xl:h-[190px]">
+        <div class="absolute bottom-0 left-0 right-0 z-10 h-[120px] lg:h-[150px] xl:h-[170px]">
             <img src="{{ asset('assets/images/builderon-img30.png') }}" alt="" class="h-full w-full object-cover object-top">
         </div>
     </section>
@@ -106,7 +106,7 @@
             </div>
         </div>
 
-        <div class="absolute bottom-0 left-0 right-0 z-10 h-[120px] lg:h-[170px] xl:h-[190px]">
+        <div class="absolute bottom-0 left-0 right-0 z-10 h-[100px] lg:h-[100px] xl:h-[120px]">
             <img src="{{ asset('assets/images/builderon-img21.png') }}" alt="" class="h-full w-full object-cover object-top">
         </div>
     </section>
@@ -183,17 +183,17 @@
             </div>
         </div>
 
-        <div class="absolute bottom-0 left-0 right-0 z-30 h-[120px] lg:h-[170px] xl:h-[190px]">
+        <div class="absolute bottom-0 left-0 right-0 z-30 h-[120px] lg:h-[130px] xl:h-[150px]">
             <img src="{{ asset('assets/images/builderon-img21.png') }}" alt="" class="h-full w-full object-cover object-top">
         </div>
     </section>
 
-    <section id="projects" class="relative overflow-hidden bg-white py-20 lg:py-24">
+    <section id="projects" class="relative overflow-hidden bg-white py-10 lg:py-14">
         <div class="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
             <div class="mx-auto max-w-[760px] text-center">
                 <p class="inline-block border border-[#FFA729] px-4 py-2 text-[14px] font-black uppercase text-[#D98200]">Project Support</p>
                 <h2 class="mt-6 text-[38px] font-black uppercase leading-none text-[#081a43] lg:text-[56px]">Ground Investigation Capability</h2>
-                <p class="mx-auto mt-5 max-w-[760px] text-[18px] leading-[1.65] text-[#4d4d4d]">
+                <p class="mx-auto mt-5 max-w-[760px] text-[16px] leading-[1.65] text-[#4d4d4d]">
                     EGL supports infrastructure, building, industrial, energy, and earthworks projects with field investigation and testing services.
                 </p>
             </div>
@@ -225,7 +225,7 @@
         </div>
     </section>
 
-    <section class="relative overflow-hidden" style="padding: 190px 0 190px 0; background-image: url('{{ asset('assets/images/builderon-img041.jpg') }}'); background-position: center; background-size: cover;">
+    <section class="relative overflow-hidden" style="padding: 110px 0 190px 0; background-image: url('{{ asset('assets/images/builderon-img041.jpg') }}'); background-position: center; background-size: cover;">
         <div class="absolute inset-0 bg-black/75"></div>
         <div class="relative mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
             <div class="grid gap-5 md:grid-cols-3">
@@ -246,21 +246,18 @@
                 </div>
             </div>
         </div>
-        <div class="absolute bottom-0 left-0 right-0 z-10 h-[120px] lg:h-[170px]">
+        <div class="absolute bottom-0 left-0 right-0 z-10 h-[100px] lg:h-[130px]">
             <img src="{{ asset('assets/images/builderon-img21.png') }}" alt="" class="h-full w-full object-cover object-top">
         </div>
     </section>
 
     <section id="delivery" class="relative overflow-hidden bg-white">
-        <div class="pointer-events-none absolute left-0 right-0 top-0 z-30 h-[100px] lg:h-[120px]">
-            <img src="{{ asset('assets/images/builderon-img21.png') }}" alt="" class="h-full w-full rotate-180 object-cover object-top">
-        </div>
 
         <div class="pointer-events-none absolute inset-0 opacity-[0.08]">
             <img src="{{ asset('assets/images/builderon-img055.png') }}" alt="" class="h-full w-full object-cover object-center">
         </div>
 
-        <div class="relative mx-auto max-w-[1040px] px-4 pb-32 pt-44 sm:px-6 lg:pb-44 lg:pt-48">
+        <div class="relative mx-auto max-w-[1040px] px-4 pb-8 pt-8 sm:px-6 lg:pb-12 lg:pt-12">
             <div class="grid items-start gap-10 lg:grid-cols-[1fr_auto]">
                 <div class="max-w-[680px]">
                     <p class="inline-block border border-[#FFA729] px-4 py-2 text-[14px] font-black uppercase leading-none text-[#D98200]">
@@ -299,6 +296,7 @@
                 @endforeach
             </div>
         </div>
+
     </section>
 
     <section class="relative overflow-hidden bg-white px-[15px] pb-[120px]">
@@ -307,7 +305,7 @@
             <div class="absolute inset-0 bg-black/45"></div>
         </div>
 
-        <div class="pointer-events-none absolute left-0 right-0 top-0 z-10 h-[120px] -translate-y-[1px] lg:h-[170px]">
+        <div class="pointer-events-none absolute left-0 right-0 top-0 z-10 h-[120px] -translate-y-[1px] lg:h-[150px]">
             <img src="{{ asset('assets/images/builderon-img21.png') }}" alt="" class="h-full w-full rotate-180 object-cover object-top">
         </div>
 
