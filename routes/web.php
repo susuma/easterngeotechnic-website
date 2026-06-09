@@ -11,5 +11,4 @@ Route::view('/services', 'pages.services')->name('services');
 Route::view('/projects', 'pages.projects')->name('projects');
 Route::view('/blog', 'pages.blog')->name('blog');
 Route::view('/equipments', 'pages.equipments')->name('equipments');
-Route::view('/certifications', 'pages.certifications')->name('certifications');
 Route::view('/contact', 'pages.contact')->name('contact');

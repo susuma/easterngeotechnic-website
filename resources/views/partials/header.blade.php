@@ -4,15 +4,14 @@
             <div class="flex flex-col gap-6 py-6 lg:flex-row lg:items-center lg:justify-between">
                 <div class="flex flex-col gap-2 lg:min-w-[300px]">
                     <a href="{{ route('home') }}" class="inline-block">
-                        <span class="block text-[24px] font-black uppercase leading-none tracking-[0.08em] text-white">Eastern</span>
-                        <span class="mt-1 block text-[18px] font-black uppercase leading-none tracking-[0.08em] text-[#FD5D14]">Geotechnics Limited</span>
+                        <img src="{{ asset('assets/images/egl-logo.jpg') }}" alt="Eastern Geotechnics" class="h-[72px] w-[260px] bg-white object-contain px-2">
                     </a>
                     <p class="text-[15px] leading-none text-white/90">Engineering Confidence from the Ground Up</p>
                 </div>
 
                 <div class="hidden lg:flex lg:items-center lg:gap-8">
                     <a href="tel:+255760594570" class="flex items-center gap-4">
-                        <span class="flex h-[46px] w-[46px] items-center justify-center border border-[#FD5D14] text-[#FD5D14]">
+                        <span class="flex h-[46px] w-[46px] items-center justify-center border border-[#FFA729] text-[#FFA729]">
                             <i class="fas fa-phone-alt text-[17px]" aria-hidden="true"></i>
                         </span>
                         <span>
@@ -22,7 +21,7 @@
                     </a>
 
                     <a href="mailto:projects@easterngeotechnics.co.tz" class="flex items-center gap-4">
-                        <span class="flex h-[46px] w-[46px] items-center justify-center border border-[#FD5D14] text-[#FD5D14]">
+                        <span class="flex h-[46px] w-[46px] items-center justify-center border border-[#FFA729] text-[#FFA729]">
                             <i class="fas fa-envelope-open-text text-[17px]" aria-hidden="true"></i>
                         </span>
                         <span>
@@ -35,17 +34,16 @@
         </div>
     </section>
 
-    <nav class="bg-[#FD5D14]">
+    <nav class="bg-[#FFA729]">
         <div class="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
             <div class="flex h-[56px] items-center justify-between">
                 <ul class="hidden h-full items-stretch lg:flex">
-                    <li><a href="{{ route('home') }}" class="flex h-full items-center px-5 text-[15px] font-bold uppercase text-white transition hover:bg-[#d35400]">Home</a></li>
-                    <li><a href="{{ route('about') }}" class="flex h-full items-center px-5 text-[15px] font-bold uppercase text-white transition hover:bg-[#d35400]">About Us</a></li>
-                    <li><a href="{{ route('services') }}" class="flex h-full items-center px-5 text-[15px] font-bold uppercase text-white transition hover:bg-[#d35400]">Services</a></li>
-                    <li><a href="{{ route('projects') }}" class="flex h-full items-center px-5 text-[15px] font-bold uppercase text-white transition hover:bg-[#d35400]">Projects</a></li>
-                    <li><a href="{{ route('equipments') }}" class="flex h-full items-center px-5 text-[15px] font-bold uppercase text-white transition hover:bg-[#d35400]">Equipment</a></li>
-                    <li><a href="{{ route('certifications') }}" class="flex h-full items-center px-5 text-[15px] font-bold uppercase text-white transition hover:bg-[#d35400]">Legal Docs</a></li>
-                    <li><a href="{{ route('contact') }}" class="flex h-full items-center px-5 text-[15px] font-bold uppercase text-white transition hover:bg-[#d35400]">Contact</a></li>
+                    <li><a href="{{ route('home') }}" class="flex h-full items-center px-5 text-[15px] font-bold uppercase text-white transition hover:bg-[#D98200]">Home</a></li>
+                    <li><a href="{{ route('about') }}" class="flex h-full items-center px-5 text-[15px] font-bold uppercase text-white transition hover:bg-[#D98200]">About Us</a></li>
+                    <li><a href="{{ route('services') }}" class="flex h-full items-center px-5 text-[15px] font-bold uppercase text-white transition hover:bg-[#D98200]">Services</a></li>
+                    <li><a href="{{ route('projects') }}" class="flex h-full items-center px-5 text-[15px] font-bold uppercase text-white transition hover:bg-[#D98200]">Projects</a></li>
+                    <li><a href="{{ route('equipments') }}" class="flex h-full items-center px-5 text-[15px] font-bold uppercase text-white transition hover:bg-[#D98200]">Equipment</a></li>
+                    <li><a href="{{ route('contact') }}" class="flex h-full items-center px-5 text-[15px] font-bold uppercase text-white transition hover:bg-[#D98200]">Contact</a></li>
                 </ul>
 
                 <div class="hidden items-center gap-6 lg:flex">
@@ -78,7 +76,6 @@
                     <a href="{{ route('services') }}" class="block text-[16px] font-bold uppercase text-white">Services</a>
                     <a href="{{ route('projects') }}" class="block text-[16px] font-bold uppercase text-white">Projects</a>
                     <a href="{{ route('equipments') }}" class="block text-[16px] font-bold uppercase text-white">Equipment</a>
-                    <a href="{{ route('certifications') }}" class="block text-[16px] font-bold uppercase text-white">Legal Docs</a>
                     <a href="{{ route('contact') }}" class="block text-[16px] font-bold uppercase text-white">Contact</a>
                 </div>
             </div>

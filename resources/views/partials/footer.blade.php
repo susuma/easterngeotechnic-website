@@ -9,8 +9,7 @@
             <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
                 <div>
                     <a href="{{ route('home') }}" class="inline-block">
-                        <span class="block text-[24px] font-black uppercase leading-none tracking-[0.08em] text-white">Eastern</span>
-                        <span class="mt-1 block text-[18px] font-black uppercase leading-none tracking-[0.08em] text-[#FD5D14]">Geotechnics Limited</span>
+                        <img src="{{ asset('assets/images/egl-logo.jpg') }}" alt="Eastern Geotechnics" class="h-[82px] w-[240px] bg-white object-contain px-2">
                     </a>
                     <p class="mt-6 text-[16px] leading-[1.8] text-slate-300">Geotechnical investigation, drilling, in-situ testing, and geophysics services for clients across Tanzania.</p>
                 </div>
@@ -28,11 +27,11 @@
                 <div>
                     <h2 class="text-[22px] font-bold uppercase text-white">Useful Links</h2>
                     <ul class="mt-6 space-y-4 text-[16px] text-slate-300">
-                        <li><a href="{{ route('about') }}" class="transition hover:text-[#FD5D14]">About Us</a></li>
-                        <li><a href="{{ route('services') }}" class="transition hover:text-[#FD5D14]">Services</a></li>
-                        <li><a href="{{ route('projects') }}" class="transition hover:text-[#FD5D14]">Projects</a></li>
-                        <li><a href="{{ route('equipments') }}" class="transition hover:text-[#FD5D14]">Equipment</a></li>
-                        <li><a href="{{ route('contact') }}" class="transition hover:text-[#FD5D14]">Contact Us</a></li>
+                        <li><a href="{{ route('about') }}" class="transition hover:text-[#FFA729]">About Us</a></li>
+                        <li><a href="{{ route('services') }}" class="transition hover:text-[#FFA729]">Services</a></li>
+                        <li><a href="{{ route('projects') }}" class="transition hover:text-[#FFA729]">Projects</a></li>
+                        <li><a href="{{ route('equipments') }}" class="transition hover:text-[#FFA729]">Equipment</a></li>
+                        <li><a href="{{ route('contact') }}" class="transition hover:text-[#FFA729]">Contact Us</a></li>
                     </ul>
                 </div>
 
@@ -51,7 +50,7 @@
             <div class="mt-12 border-t border-white/10 pt-6">
                 <div class="flex flex-col gap-4 text-[15px] text-slate-300 md:flex-row md:items-center md:justify-between">
                     <p>Copyright © {{ date('Y') }} Eastern Geotechnics Limited. All rights reserved.</p>
-                    <a href="mailto:projects@easterngeotechnics.co.tz" class="transition hover:text-[#FD5D14]">projects@easterngeotechnics.co.tz</a>
+                    <a href="mailto:projects@easterngeotechnics.co.tz" class="transition hover:text-[#FFA729]">projects@easterngeotechnics.co.tz</a>
                 </div>
             </div>
         </div>

@@ -12,7 +12,7 @@
                 <img src="{{ asset('assets/images/builderon-img28.jpg') }}" alt="Drilling equipment" class="h-[520px] w-full object-cover">
             </div>
             <div>
-                <p class="inline-block border-2 border-[#FD5D14] px-4 py-2 text-sm font-black uppercase text-[#FD5D14]">Drilling Rigs</p>
+                <p class="inline-block border-2 border-[#FFA729] px-4 py-2 text-sm font-black uppercase text-[#FFA729]">Drilling Rigs</p>
                 <h1 class="mt-6 text-3xl font-black uppercase leading-tight text-[#081a43] sm:text-4xl">Versatile drilling teams for investigation work</h1>
                 <p class="mt-6 text-lg leading-8 text-slate-600">
                     EGL's drilling capacity includes hand auger tripods and wheel-mounted, lightweight, versatile motorized rotary coring drilling rigs.
@@ -22,11 +22,11 @@
                 </p>
                 <div class="mt-8 grid gap-4 sm:grid-cols-2">
                     <div class="bg-slate-100 p-6">
-                        <div class="text-3xl font-black text-[#FD5D14]">180m</div>
+                        <div class="text-3xl font-black text-[#FFA729]">180m</div>
                         <p class="mt-2 font-bold text-[#081a43]">Depth capacity</p>
                     </div>
                     <div class="bg-slate-100 p-6">
-                        <div class="text-3xl font-black text-[#FD5D14]">3</div>
+                        <div class="text-3xl font-black text-[#FFA729]">3</div>
                         <p class="mt-2 font-bold text-[#081a43]">Drilling teams</p>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
     <section class="bg-slate-100 py-20 lg:py-24">
         <div class="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl">
-                <p class="inline-block border border-[#d8a06d] px-4 py-2 text-sm font-black uppercase text-[#c96a18]">Testing Equipment</p>
+                <p class="inline-block border border-[#FFA729] px-4 py-2 text-sm font-black uppercase text-[#D98200]">Testing Equipment</p>
                 <h2 class="mt-6 text-3xl font-black uppercase leading-tight text-[#081a43] sm:text-4xl">Field equipment for faster, reliable site diagnosis</h2>
             </div>
             <div class="mt-10 grid gap-6 md:grid-cols-3">

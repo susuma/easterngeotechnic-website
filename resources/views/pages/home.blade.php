@@ -22,9 +22,26 @@
         ];
 
         $faqs = [
-            ['q' => 'Why choose EGL for your project?', 'a' => 'EGL combines practical drilling capability, professional testing, responsive service, and local Tanzania project experience.'],
-            ['q' => 'What services can EGL provide?', 'a' => 'The team supports geotechnical engineering, geological engineering, borehole drilling, geophysics, material inventory, and in-situ testing.'],
-            ['q' => 'What drilling capacity is available?', 'a' => 'The profile notes deployable drilling teams with drilling depth capacity of up to 180m.'],
+            [
+                'q' => 'Why choose EGL for your project?',
+                'a' => 'Experience in similar projects.
+                        Availability of drilling rigs and laboratory facilities.
+                        Compliance with international standards (e.g., Eurocode 7, ASTM, BS standards).
+                        Strong health, safety, and environmental performance.
+                        EGL combines practical drilling capability, professional testing, responsive service,
+                        and local Tanzania project experience.'
+            ],
+            [
+                'q' => 'What services can EGL provide?',
+                'a' => 'The team supports geotechnical engineering, geological engineering, borehole drilling, geophysics,
+                        material inventory, in-situ testing, supply of materials and equipment related to drilling,
+                        from all kind of core barrel, drilling rods, drilling additives like COATED BENTONITE PELLETS, BENTONITE CHIPS,
+                        Bentonite powder, geological exploration, drilling bits'
+            ],
+            [
+                'q' => 'What drilling capacity is available?',
+                'a' => 'The profile notes deployable drilling teams with drilling depth capacity of up to 300m.'
+            ],
         ];
     @endphp
 
@@ -38,7 +55,7 @@
         <div class="relative mx-auto flex min-h-[800px] max-w-7xl items-center px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
             <div class="w-full text-center">
                 <div class="mx-auto max-w-4xl">
-                    <p class="text-sm font-black uppercase tracking-[0.32em] text-[#FD5D14]">Geotechnical Investigation Services Provider</p>
+                    <p class="text-sm font-black uppercase tracking-[0.32em] text-[#FFA729]">Geotechnical Investigation Services Provider</p>
                     <h1 class="mt-6 text-4xl font-black uppercase leading-[0.98] sm:text-5xl lg:text-6xl">
                         Professional Geotechnical, Drilling & Testing Services Across Tanzania
                     </h1>
@@ -46,7 +63,7 @@
                         Eastern Geotechnics Limited provides reliable geotechnical investigation, borehole drilling, in-situ testing, geophysics study, and engineering support for project teams.
                     </p>
                     <div class="mt-10 flex flex-wrap justify-center gap-4">
-                        <a href="#services" class="inline-flex items-center justify-center bg-[#FD5D14] px-8 py-4 text-xs font-bold uppercase tracking-[0.22em] text-white transition hover:bg-orange-600">Explore Services</a>
+                        <a href="#services" class="inline-flex items-center justify-center bg-[#FFA729] px-8 py-4 text-xs font-bold uppercase tracking-[0.22em] text-white transition hover:bg-[#D98200]">Explore Services</a>
                         <a href="{{ route('contact') }}" class="inline-flex items-center justify-center border border-white/35 px-8 py-4 text-xs font-bold uppercase tracking-[0.22em] text-white transition hover:bg-white/10">Request Consultation</a>
                     </div>
                 </div>
@@ -54,11 +71,11 @@
         </div>
 
         <div class="absolute bottom-0 left-0 right-0 z-10 h-[120px] lg:h-[170px] xl:h-[190px]">
-            <img src="{{ asset('assets/images/builderon-img3.png') }}" alt="" class="h-full w-full object-cover object-top">
+            <img src="{{ asset('assets/images/builderon-img30.png') }}" alt="" class="h-full w-full object-cover object-top">
         </div>
     </section>
 
-    <section id="services" class="relative overflow-hidden bg-[#FD5D14] py-16 text-white lg:pt-0 lg:pb-24">
+    <section id="services" class="relative overflow-hidden bg-[#FFA729] py-16 text-white lg:pt-0 lg:pb-24">
         <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lg:min-h-[450px]">
             <div class="grid gap-10 lg:grid-cols-[1fr_2fr] lg:gap-8">
                 <div class="flex">
@@ -107,7 +124,7 @@
                     <img src="{{ asset('assets/images/builderon-img17.jpg') }}" alt="Eastern Geotechnics field investigation" class="h-auto w-full object-cover">
                 </div>
 
-                <div class="mt-6 bg-[#FD5D14] px-8 py-12 text-white lg:absolute lg:right-0 lg:top-[60px] lg:z-10 lg:mt-0 lg:flex lg:h-[430px] lg:w-[520px] lg:items-center lg:justify-center">
+                <div class="mt-6 bg-[#FFA729] px-8 py-12 text-white lg:absolute lg:right-0 lg:top-[60px] lg:z-10 lg:mt-0 lg:flex lg:h-[430px] lg:w-[520px] lg:items-center lg:justify-center">
                     <div class="max-w-[360px]">
                         <p class="text-sm font-black uppercase tracking-[0.24em] text-orange-100">Established 2024</p>
                         <h3 class="mt-5 text-4xl font-black uppercase leading-tight">Fast-growing Tanzanian geotechnical contractor</h3>
@@ -115,17 +132,17 @@
                 </div>
 
                 <div class="relative z-20 mt-6 bg-white px-7 py-10 shadow-[0_18px_45px_rgba(0,0,0,0.12)] lg:absolute lg:left-[48px] lg:top-[195px] lg:mt-0 lg:w-[620px] lg:px-11 lg:py-12">
-                    <p class="inline-block border-2 border-[#FD5D14] px-4 py-2 text-[15px] font-black uppercase leading-none text-[#FD5D14]">Introduction</p>
+                    <p class="inline-block border-2 border-[#FFA729] px-4 py-2 text-[15px] font-black uppercase leading-none text-[#FFA729]">Introduction</p>
                     <h2 class="mt-7 text-[32px] font-black uppercase leading-[1.05] text-[#081a43] lg:text-[44px]">Engineering confidence from the ground up</h2>
                     <p class="mt-6 max-w-[500px] text-[18px] leading-[1.65] text-[#555]">
                         Eastern Geotechnics Limited provides high-quality professional geotechnical investigations and testing services to clients across Tanzania.
                     </p>
                     <ul class="mt-7 space-y-4 text-[17px] leading-[1.55] text-[#444]">
-                        <li class="flex items-start gap-3"><span class="mt-[10px] h-[3px] w-[14px] shrink-0 bg-[#FD5D14]"></span><span>Foundation, pavement, slope, and centerline investigations</span></li>
-                        <li class="flex items-start gap-3"><span class="mt-[10px] h-[3px] w-[14px] shrink-0 bg-[#FD5D14]"></span><span>Borehole drilling, geophysics, and in-situ testing</span></li>
-                        <li class="flex items-start gap-3"><span class="mt-[10px] h-[3px] w-[14px] shrink-0 bg-[#FD5D14]"></span><span>Integrity, excellence, teamwork, and safety in field delivery</span></li>
+                        <li class="flex items-start gap-3"><span class="mt-[10px] h-[3px] w-[14px] shrink-0 bg-[#FFA729]"></span><span>Foundation, pavement, slope, and centerline investigations</span></li>
+                        <li class="flex items-start gap-3"><span class="mt-[10px] h-[3px] w-[14px] shrink-0 bg-[#FFA729]"></span><span>Borehole drilling, geophysics, and in-situ testing</span></li>
+                        <li class="flex items-start gap-3"><span class="mt-[10px] h-[3px] w-[14px] shrink-0 bg-[#FFA729]"></span><span>Integrity, excellence, teamwork, and safety in field delivery</span></li>
                     </ul>
-                    <a href="{{ route('about') }}" class="mt-10 inline-flex items-center justify-center bg-[#FD5D14] px-8 py-4 text-[16px] font-black uppercase text-white transition hover:bg-[#e45412]">More About Us</a>
+                    <a href="{{ route('about') }}" class="mt-10 inline-flex items-center justify-center bg-[#FFA729] px-8 py-4 text-[16px] font-black uppercase text-white transition hover:bg-[#D98200]">More About Us</a>
                 </div>
             </div>
         </div>
@@ -147,7 +164,7 @@
 
             <div class="relative z-20 mx-auto flex min-h-[700px] max-w-[1180px] items-center px-4 pt-28 sm:px-6 lg:px-8">
                 <div class="grid w-full items-center gap-8 lg:grid-cols-[1.3fr_0.7fr]">
-                    <div class="relative w-full max-w-[620px] bg-[#FD5D14] px-8 py-10 shadow-[0_18px_45px_rgba(0,0,0,0.16)] lg:px-10">
+                    <div class="relative w-full max-w-[620px] bg-[#FFA729] px-8 py-10 shadow-[0_18px_45px_rgba(0,0,0,0.16)] lg:px-10">
                         <div class="pointer-events-none absolute bottom-0 right-0 z-0 opacity-60">
                             <img src="{{ asset('assets/images/builderon-img22.png') }}" alt="" class="h-auto w-[190px] object-contain">
                         </div>
@@ -160,7 +177,7 @@
                         </div>
                     </div>
                     <div class="relative hidden min-h-[640px] lg:block">
-                        <img src="{{ asset('assets/images/builderon-img23.png') }}" alt="" class="absolute bottom-0 left-1/2 z-20 max-h-[610px] w-auto -translate-x-1/2 object-contain">
+                        <img src="{{ asset('assets/images/builderon-img23-african.png') }}" alt="" class="absolute bottom-0 left-1/2 z-20 max-h-[610px] w-auto -translate-x-1/2 object-contain">
                     </div>
                 </div>
             </div>
@@ -174,7 +191,7 @@
     <section id="projects" class="relative overflow-hidden bg-white py-20 lg:py-24">
         <div class="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
             <div class="mx-auto max-w-[760px] text-center">
-                <p class="inline-block border border-[#d8a06d] px-4 py-2 text-[14px] font-black uppercase text-[#c96a18]">Project Support</p>
+                <p class="inline-block border border-[#FFA729] px-4 py-2 text-[14px] font-black uppercase text-[#D98200]">Project Support</p>
                 <h2 class="mt-6 text-[38px] font-black uppercase leading-none text-[#081a43] lg:text-[56px]">Ground Investigation Capability</h2>
                 <p class="mx-auto mt-5 max-w-[760px] text-[18px] leading-[1.65] text-[#4d4d4d]">
                     EGL supports infrastructure, building, industrial, energy, and earthworks projects with field investigation and testing services.
@@ -183,7 +200,7 @@
 
             <div class="mt-10 flex flex-wrap items-center justify-center gap-x-2 gap-y-4">
                 @foreach (['All', 'Drilling', 'Testing', 'Geophysics'] as $filter)
-                    <span class="{{ $loop->first ? 'bg-[#FD5D14] text-white' : 'bg-white text-slate-700' }} px-5 py-3 text-xs font-bold uppercase tracking-[0.24em] shadow-sm ring-1 ring-slate-200">{{ $filter }}</span>
+                    <span class="{{ $loop->first ? 'bg-[#FFA729] text-white' : 'bg-white text-slate-700' }} px-5 py-3 text-xs font-bold uppercase tracking-[0.24em] shadow-sm ring-1 ring-slate-200">{{ $filter }}</span>
                 @endforeach
             </div>
 
@@ -212,18 +229,18 @@
         <div class="absolute inset-0 bg-black/75"></div>
         <div class="relative mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
             <div class="grid gap-5 md:grid-cols-3">
-                <div class="border-2 border-[#FD5D14]/50 bg-[#030f27]/70 p-10 text-center">
-                    <i class="fas fa-calendar-check text-[56px] text-[#FD5D14]" aria-hidden="true"></i>
+                <div class="border-2 border-[#FFA729]/50 bg-[#030f27]/70 p-10 text-center">
+                    <i class="fas fa-calendar-check text-[56px] text-[#FFA729]" aria-hidden="true"></i>
                     <div class="mt-6 text-[34px] font-black leading-none text-white">2024</div>
                     <div class="mt-3 text-[16px] text-white">Established</div>
                 </div>
-                <div class="border-2 border-[#FD5D14]/50 bg-[#030f27]/70 p-10 text-center">
-                    <i class="fas fa-ruler-vertical text-[56px] text-[#FD5D14]" aria-hidden="true"></i>
-                    <div class="mt-6 text-[34px] font-black leading-none text-white">180m</div>
+                <div class="border-2 border-[#FFA729]/50 bg-[#030f27]/70 p-10 text-center">
+                    <i class="fas fa-ruler-vertical text-[56px] text-[#FFA729]" aria-hidden="true"></i>
+                    <div class="mt-6 text-[34px] font-black leading-none text-white">300m</div>
                     <div class="mt-3 text-[16px] text-white">Drilling Capacity</div>
                 </div>
-                <div class="border-2 border-[#FD5D14]/50 bg-[#030f27]/70 p-10 text-center">
-                    <i class="fas fa-people-carry-box text-[56px] text-[#FD5D14]" aria-hidden="true"></i>
+                <div class="border-2 border-[#FFA729]/50 bg-[#030f27]/70 p-10 text-center">
+                    <i class="fas fa-people-carry-box text-[56px] text-[#FFA729]" aria-hidden="true"></i>
                     <div class="mt-6 text-[34px] font-black leading-none text-white">3</div>
                     <div class="mt-3 text-[16px] text-white">Deployable Teams</div>
                 </div>
@@ -252,7 +269,7 @@
                 <div class="z-20 lg:mr-[50px]">
                     <div class="grid grid-cols-2">
                         <div class="min-h-[168px] bg-cover bg-top" style="background-image: url('{{ asset('assets/images/builderon-img44.jpg') }}');"></div>
-                        <div class="flex items-center bg-[#FD5D14] px-[24px] py-[36px]">
+                        <div class="flex items-center bg-[#FFA729] px-[24px] py-[36px]">
                             <h3 class="text-[18px] font-bold uppercase leading-[1.25] text-white">Geotechnical services across Tanzania</h3>
                         </div>
                     </div>
@@ -283,7 +300,7 @@
                             <div class="mb-5"><input name="email" type="email" placeholder="Your Email*" required class="w-full border-0 bg-[#f4f4f4] px-5 py-5 text-[16px] text-[#081a43] outline-none"></div>
                             <div class="mb-5"><input name="phone" type="tel" placeholder="Your Number*" required class="w-full border-0 bg-[#f4f4f4] px-5 py-5 text-[16px] text-[#081a43] outline-none"></div>
                             <div class="mb-5"><textarea name="message" rows="6" placeholder="Enter your message" class="w-full border-0 bg-[#f4f4f4] px-5 py-5 text-[16px] text-[#081a43] outline-none"></textarea></div>
-                            <button type="submit" class="inline-flex items-center justify-center bg-[#FD5D14] px-10 py-4 text-[16px] font-bold uppercase text-white transition hover:bg-[#e45412]">Submit Message</button>
+                            <button type="submit" class="inline-flex items-center justify-center bg-[#FFA729] px-10 py-4 text-[16px] font-bold uppercase text-white transition hover:bg-[#D98200]">Submit Message</button>
                         </form>
                     </div>
                 </div>

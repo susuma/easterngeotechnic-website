@@ -9,7 +9,7 @@
 
     <div class="relative mx-auto flex min-h-[340px] max-w-[1180px] items-center px-4 py-20 sm:px-6 lg:px-8">
         <div class="max-w-3xl">
-            <p class="text-sm font-black uppercase tracking-[0.28em] text-[#FD5D14]">Eastern Geotechnics Limited</p>
+            <p class="text-sm font-black uppercase tracking-[0.28em] text-[#FFA729]">Eastern Geotechnics Limited</p>
             <h1 class="mt-5 text-4xl font-black uppercase leading-tight sm:text-5xl">{{ $title }}</h1>
             @if ($subtitle)
                 <p class="mt-4 text-lg leading-8 text-slate-100">{{ $subtitle }}</p>

@@ -12,7 +12,7 @@
                 <img src="{{ asset('assets/images/builderon-img17.jpg') }}" alt="Eastern Geotechnics field work" class="h-[520px] w-full object-cover">
             </div>
             <div>
-                <p class="inline-block border-2 border-[#FD5D14] px-4 py-2 text-sm font-black uppercase text-[#FD5D14]">Company Profile</p>
+                <p class="inline-block border-2 border-[#FFA729] px-4 py-2 text-sm font-black uppercase text-[#FFA729]">Company Profile</p>
                 <h1 class="mt-6 text-3xl font-black uppercase leading-tight text-[#081a43] sm:text-4xl">Professional geotechnical investigations and testing across Tanzania</h1>
                 <p class="mt-6 text-lg leading-8 text-slate-600">
                     Eastern Geotechnics Limited was established in 2024 and is among Tanzania's fast-growing geotechnical investigation contractors. EGL provides high-quality professional geotechnical investigations and testing services to clients across Tanzania.
@@ -40,7 +40,7 @@
     <section class="bg-white py-20 lg:py-24">
         <div class="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl">
-                <p class="inline-block border border-[#d8a06d] px-4 py-2 text-sm font-black uppercase text-[#c96a18]">Core Values</p>
+                <p class="inline-block border border-[#FFA729] px-4 py-2 text-sm font-black uppercase text-[#D98200]">Core Values</p>
                 <h2 class="mt-6 text-3xl font-black uppercase leading-tight text-[#081a43] sm:text-4xl">Principles that guide daily decisions and field delivery</h2>
             </div>
             <div class="mt-10 grid gap-6 md:grid-cols-3">
