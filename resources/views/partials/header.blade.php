@@ -6,7 +6,7 @@
                     <a href="{{ route('home') }}" class="inline-block">
                         <img src="{{ asset('assets/images/egl-logo.jpg') }}" alt="Eastern Geotechnics" class="h-[72px] w-[260px] bg-white object-contain px-2">
                     </a>
-                    <p class="text-[15px] leading-none text-white/90">Engineering Confidence from the Ground Up</p>
+                    <p class="text-[13px] leading-none text-white/90">Engineering Confidence from the Ground Up</p>
                 </div>
 
                 <div class="hidden lg:flex lg:items-center lg:gap-8">
