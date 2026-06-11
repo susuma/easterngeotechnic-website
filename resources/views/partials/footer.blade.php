@@ -108,6 +108,7 @@
                         <li><a href="{{ route('projects') }}" class="transition hover:text-[#FFA729]">Projects</a></li>
                         <li><a href="{{ route('equipments') }}" class="transition hover:text-[#FFA729]">Equipment</a></li>
                         <li><a href="{{ route('contact') }}" class="transition hover:text-[#FFA729]">Contact Us</a></li>
+                        <li><a href="{{ route('admin.login') }}" target="_blank" class="transition hover:text-[#FFA729]">Staff Login</a></li>
                     </ul>
                 </div>
 
@@ -128,10 +129,6 @@
                     <p>Copyright © {{ date('Y') }} {{ $siteSettings['company_name'] }}. All rights reserved.</p>
                     <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
                         <a href="mailto:{{ $siteSettings['email'] }}" class="break-all transition hover:text-white">{{ $siteSettings['email'] }}</a>
-                        <a href="{{ route('admin.login') }}" class="inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.12em] text-slate-400 transition hover:text-[#FFA729]">
-                            <i class="fas fa-lock text-[11px]" aria-hidden="true"></i>
-                            Administrator Login
-                        </a>
                     </div>
                 </div>
             </div>
