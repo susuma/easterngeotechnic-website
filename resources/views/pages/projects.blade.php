@@ -26,7 +26,7 @@
             <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 @foreach ($projects as $project)
                     <article data-reveal="up" style="--reveal-delay: {{ ($loop->index % 3) * 100 }}ms" class="overflow-hidden border border-slate-200 bg-white shadow-sm">
-                        <img src="{{ asset('assets/images/' . $project['image']) }}" alt="{{ $project['title'] }}" class="h-64 w-full object-cover">
+                        <img src="{{ asset('assets/images/' . $project['image']) }}" alt="{{ $project['title'] }}" loading="lazy" decoding="async" class="h-64 w-full object-cover">
                         <div class="p-6">
                             <h2 class="text-xl font-black uppercase text-[#081a43]">{{ $project['title'] }}</h2>
                             <p class="mt-4 leading-7 text-slate-600">{{ $project['text'] }}</p>

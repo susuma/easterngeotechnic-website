@@ -10,22 +10,22 @@
                 </div>
 
                 <div class="hidden lg:flex lg:items-center lg:gap-8">
-                    <a href="tel:+255760594570" class="flex items-center gap-4">
+                    <a href="tel:{{ preg_replace('/[^0-9+]/', '', $siteSettings['phone_primary']) }}" class="flex items-center gap-4">
                         <span class="flex h-[46px] w-[46px] items-center justify-center border border-[#FFA729] text-[#FFA729]">
                             <i class="fas fa-phone-alt text-[17px]" aria-hidden="true"></i>
                         </span>
                         <span>
-                            <span class="block text-[17px] font-bold leading-none text-white">+255 760 594 570</span>
+                            <span class="block text-[17px] font-bold leading-none text-white">{{ $siteSettings['phone_primary'] }}</span>
                             <span class="mt-2 block text-[14px] leading-none text-white/85">Phone number</span>
                         </span>
                     </a>
 
-                    <a href="mailto:projects@easterngeotechnics.co.tz" class="flex items-center gap-4">
+                    <a href="mailto:{{ $siteSettings['email'] }}" class="flex items-center gap-4">
                         <span class="flex h-[46px] w-[46px] items-center justify-center border border-[#FFA729] text-[#FFA729]">
                             <i class="fas fa-envelope-open-text text-[17px]" aria-hidden="true"></i>
                         </span>
                         <span>
-                            <span class="block text-[17px] font-bold leading-none text-white">projects@easterngeotechnics.co.tz</span>
+                            <span class="block text-[17px] font-bold leading-none text-white">{{ $siteSettings['email'] }}</span>
                             <span class="mt-2 block text-[14px] leading-none text-white/85">Email address</span>
                         </span>
                     </a>
@@ -47,19 +47,19 @@
                 </ul>
 
                 <div class="hidden items-center gap-6 lg:flex">
-                    <a href="#" class="text-white transition hover:text-[#081a43]" aria-label="Facebook">
+                    <a href="{{ $siteSettings['facebook_url'] }}" class="text-white transition hover:text-[#081a43]" aria-label="Facebook">
                         <i class="fab fa-facebook-f text-[18px]" aria-hidden="true"></i>
                     </a>
-                    <a href="#" class="text-white transition hover:text-[#081a43]" aria-label="Twitter">
+                    <a href="{{ $siteSettings['twitter_url'] }}" class="text-white transition hover:text-[#081a43]" aria-label="Twitter">
                         <i class="fab fa-twitter text-[18px]" aria-hidden="true"></i>
                     </a>
-                    <a href="#" class="text-white transition hover:text-[#081a43]" aria-label="Google">
+                    <a href="{{ $siteSettings['google_url'] }}" class="text-white transition hover:text-[#081a43]" aria-label="Google">
                         <i class="fab fa-google text-[18px]" aria-hidden="true"></i>
                     </a>
-                    <a href="#" class="text-white transition hover:text-[#081a43]" aria-label="Instagram">
+                    <a href="{{ $siteSettings['instagram_url'] }}" class="text-white transition hover:text-[#081a43]" aria-label="Instagram">
                         <i class="fab fa-instagram text-[18px]" aria-hidden="true"></i>
                     </a>
-                    <a href="#" class="text-white transition hover:text-[#081a43]" aria-label="Pinterest">
+                    <a href="{{ $siteSettings['pinterest_url'] }}" class="text-white transition hover:text-[#081a43]" aria-label="Pinterest">
                         <i class="fab fa-pinterest text-[18px]" aria-hidden="true"></i>
                     </a>
                 </div>

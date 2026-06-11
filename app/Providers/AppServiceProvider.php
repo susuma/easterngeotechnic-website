@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Support\SiteSettings;
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -11,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->singleton(SiteSettings::class);
     }
 
     /**
@@ -19,6 +22,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        if ($this->app->isProduction()) {
+            URL::forceScheme('https');
+        }
+
+        View::composer('*', function ($view): void {
+            $view->with('siteSettings', app(SiteSettings::class)->all());
+        });
     }
 }

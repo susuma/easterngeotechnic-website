@@ -78,10 +78,23 @@ const initialiseRevealAnimations = () => {
     requestAnimationFrame(() => requestAnimationFrame(() => root.classList.add('page-ready')));
 };
 
+const initialiseAdminAnimations = () => {
+    if (!document.querySelector('[data-admin-reveal]')) {
+        return;
+    }
+
+    document.documentElement.classList.add('motion-ready');
+    requestAnimationFrame(() => requestAnimationFrame(() => document.documentElement.classList.add('page-ready')));
+};
+
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initialiseRevealAnimations);
+    document.addEventListener('DOMContentLoaded', () => {
+        initialiseRevealAnimations();
+        initialiseAdminAnimations();
+    });
 } else {
     initialiseRevealAnimations();
+    initialiseAdminAnimations();
 }
 
 const initialiseScrollToTop = () => {

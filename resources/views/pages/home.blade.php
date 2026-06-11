@@ -40,7 +40,7 @@
             ],
             [
                 'q' => 'What drilling capacity is available?',
-                'a' => 'The profile notes deployable drilling teams with drilling depth capacity of up to 300m.'
+                'a' => 'The company has deployable drilling teams with drilling depth capacity of up to '.$siteSettings['drilling_capacity'].'m.'
             ],
         ];
     @endphp
@@ -121,7 +121,7 @@
         <div class="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
             <div class="relative lg:min-h-[760px]">
                 <div data-reveal="left" class="relative z-10 max-w-full lg:absolute lg:left-0 lg:top-0 lg:w-[456px]">
-                    <img src="{{ asset('assets/images/builderon-img17.jpg') }}" alt="Eastern Geotechnics field investigation" class="h-auto w-full object-cover">
+                    <img src="{{ asset('assets/images/builderon-img17.jpg') }}" alt="Eastern Geotechnics field investigation" loading="lazy" decoding="async" class="h-auto w-full object-cover">
                 </div>
 
                 <div data-reveal="right" style="--reveal-delay: 120ms" class="mt-6 bg-[#FFA729] px-8 py-12 text-white lg:absolute lg:right-0 lg:top-[60px] lg:z-10 lg:mt-0 lg:flex lg:h-[430px] lg:w-[520px] lg:items-center lg:justify-center">
@@ -172,12 +172,12 @@
                             <p class="inline-block border-2 border-white px-4 py-2 text-[14px] font-black uppercase text-white">Call To Action</p>
                             <h2 class="mt-8 text-[32px] font-black uppercase leading-tight text-white lg:text-[38px]">Need a geotechnical investigation or drilling team?</h2>
                             <div class="mt-8 h-[4px] w-[230px] bg-[#081a43]"></div>
-                            <a href="tel:+255760594570" class="mt-8 block text-[30px] font-black leading-tight text-white hover:opacity-90">+255 760 594 570</a>
-                            <a href="mailto:projects@easterngeotechnics.co.tz" class="mt-4 block break-words text-[24px] font-black leading-tight text-white hover:opacity-90">projects@easterngeotechnics.co.tz</a>
+                            <a href="tel:{{ preg_replace('/[^0-9+]/', '', $siteSettings['phone_primary']) }}" class="mt-8 block text-[30px] font-black leading-tight text-white hover:opacity-90">{{ $siteSettings['phone_primary'] }}</a>
+                            <a href="mailto:{{ $siteSettings['email'] }}" class="mt-4 block break-words text-[24px] font-black leading-tight text-white hover:opacity-90">{{ $siteSettings['email'] }}</a>
                         </div>
                     </div>
                     <div data-reveal="right" style="--reveal-delay: 140ms" class="relative hidden min-h-[640px] lg:block">
-                        <img src="{{ asset('assets/images/builderon-img23-african.png') }}" alt="" class="absolute bottom-0 left-1/2 z-20 max-h-[610px] w-auto -translate-x-1/2 object-contain">
+                        <img src="{{ asset('assets/images/builderon-img23-african.png') }}" alt="" loading="lazy" decoding="async" class="absolute bottom-0 left-1/2 z-20 max-h-[610px] w-auto -translate-x-1/2 object-contain">
                     </div>
                 </div>
             </div>
@@ -209,7 +209,7 @@
                     <div class="grid gap-5 {{ $loop->last ? 'md:col-span-2 xl:col-span-1' : '' }}">
                         @foreach ($column as $project)
                             <a href="{{ route('projects') }}" data-reveal="scale" style="--reveal-delay: {{ $loop->index * 80 }}ms" class="group relative block overflow-hidden">
-                                <img src="{{ asset('assets/images/' . $project['image']) }}" alt="{{ $project['title'] }}" class="h-auto w-full object-cover">
+                                <img src="{{ asset('assets/images/' . $project['image']) }}" alt="{{ $project['title'] }}" loading="lazy" decoding="async" class="h-auto w-full object-cover">
                                 <div class="absolute inset-0 bg-slate-950/55 opacity-0 transition duration-300 group-hover:opacity-100"></div>
                                 <div class="absolute inset-0 flex items-center justify-center px-6 text-center opacity-0 transition duration-300 group-hover:opacity-100">
                                     <div>
@@ -236,12 +236,12 @@
                 </div>
                 <div data-reveal="up" style="--reveal-delay: 100ms" class="border-2 border-[#FFA729]/50 bg-[#030f27]/70 p-10 text-center">
                     <i class="fas fa-ruler-vertical text-[56px] text-[#FFA729]" aria-hidden="true"></i>
-                    <div data-counter="300" data-counter-suffix="m" data-counter-duration="850" class="mt-6 text-[34px] font-black leading-none text-white">300m</div>
+                    <div data-counter="{{ $siteSettings['drilling_capacity'] }}" data-counter-suffix="m" data-counter-duration="850" class="mt-6 text-[34px] font-black leading-none text-white">{{ $siteSettings['drilling_capacity'] }}m</div>
                     <div class="mt-3 text-[16px] text-white">Drilling Capacity</div>
                 </div>
                 <div data-reveal="up" style="--reveal-delay: 200ms" class="border-2 border-[#FFA729]/50 bg-[#030f27]/70 p-10 text-center">
                     <i class="fas fa-people-carry-box text-[56px] text-[#FFA729]" aria-hidden="true"></i>
-                    <div data-counter="3" data-counter-duration="650" class="mt-6 text-[34px] font-black leading-none text-white">3</div>
+                    <div data-counter="{{ $siteSettings['deployable_teams'] }}" data-counter-duration="650" class="mt-6 text-[34px] font-black leading-none text-white">{{ $siteSettings['deployable_teams'] }}</div>
                     <div class="mt-3 text-[16px] text-white">Deployable Teams</div>
                 </div>
             </div>
@@ -285,7 +285,7 @@
                 ] as $step)
                     <article data-reveal="up" style="--reveal-delay: {{ $loop->index * 100 }}ms" class="group flex h-full flex-col overflow-hidden border border-[#FFA729]/55 bg-white">
                         <div class="relative overflow-hidden" style="aspect-ratio: 4 / 3;">
-                            <img src="{{ asset('assets/images/' . $step['image']) }}" alt="{{ $step['title'] }}" class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+                            <img src="{{ asset('assets/images/' . $step['image']) }}" alt="{{ $step['title'] }}" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
                         </div>
                         <div class="flex flex-1 flex-col px-7 pb-8 pt-7">
                             <p class="text-[13px] font-black uppercase leading-none text-[#D98200]">Step {{ $step['number'] }}</p>
@@ -379,6 +379,9 @@
                                 @error('message') <p class="mt-2 text-sm text-red-700">{{ $message }}</p> @enderror
                                 @error('form_token') <p class="mt-2 text-sm text-red-700">{{ $message }}</p> @enderror
                             </div>
+                            <p class="mb-5 text-[13px] leading-6 text-slate-500">
+                                Your details will only be used to respond to this inquiry and coordinate requested services. We do not sell or share inquiry information for marketing.
+                            </p>
                             <button type="submit" class="inline-flex items-center justify-center bg-[#FFA729] px-10 py-4 text-[16px] font-bold uppercase text-white transition hover:bg-[#D98200]">Submit Message</button>
                         </form>
                     </div>

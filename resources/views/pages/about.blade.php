@@ -9,7 +9,7 @@
     <section class="bg-white py-20 lg:py-24">
         <div class="mx-auto grid max-w-[1180px] items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1fr_1.1fr] lg:px-8">
             <div data-reveal="left">
-                <img src="{{ asset('assets/images/builderon-img17.jpg') }}" alt="Eastern Geotechnics field work" class="h-[520px] w-full object-cover">
+                <img src="{{ asset('assets/images/builderon-img17.jpg') }}" alt="Eastern Geotechnics field work" loading="lazy" decoding="async" class="h-[520px] w-full object-cover">
             </div>
             <div data-reveal="right" style="--reveal-delay: 120ms">
                 <p class="inline-block border-2 border-[#FFA729] px-4 py-2 text-sm font-black uppercase text-[#FFA729]">Company Profile</p>

@@ -9,7 +9,7 @@
     <section class="bg-white py-20 lg:py-24">
         <div class="mx-auto grid max-w-[1180px] gap-12 px-4 sm:px-6 lg:grid-cols-[1fr_1.1fr] lg:px-8">
             <div data-reveal="left">
-                <img src="{{ asset('assets/images/builderon-img28.jpg') }}" alt="Drilling equipment" class="h-[520px] w-full object-cover">
+                <img src="{{ asset('assets/images/builderon-img28.jpg') }}" alt="Drilling equipment" loading="lazy" decoding="async" class="h-[520px] w-full object-cover">
             </div>
             <div data-reveal="right" style="--reveal-delay: 120ms">
                 <p class="inline-block border-2 border-[#FFA729] px-4 py-2 text-sm font-black uppercase text-[#FFA729]">Drilling Rigs</p>
@@ -18,15 +18,15 @@
                     EGL's drilling capacity includes hand auger tripods and wheel-mounted, lightweight, versatile motorized rotary coring drilling rigs.
                 </p>
                 <p class="mt-4 text-lg leading-8 text-slate-600">
-                    The company can deploy up to three drilling teams with drilling depth capacity of up to 180m. The profile also notes GY150-T series diamond rotary coring drilling rigs supplied ISO 9001:2000 certified.
+                    EGL has expanded its deployable drilling teams and drilling depth capacity to support investigations reaching up to {{ $siteSettings['drilling_capacity'] }}m. Its GY150-T and GY150-HB series diamond rotary coring rigs are suitable for mineral exploration, geotechnical site investigations, and water-well drilling.
                 </p>
                 <div class="mt-8 grid gap-4 sm:grid-cols-2">
                     <div data-reveal="up" class="bg-slate-100 p-6">
-                        <div data-counter="300" data-counter-suffix="m" data-counter-duration="850" class="text-3xl font-black text-[#FFA729]">300m</div>
+                        <div data-counter="{{ $siteSettings['drilling_capacity'] }}" data-counter-suffix="m" data-counter-duration="850" class="text-3xl font-black text-[#FFA729]">{{ $siteSettings['drilling_capacity'] }}m</div>
                         <p class="mt-2 font-bold text-[#081a43]">Depth capacity</p>
                     </div>
                     <div data-reveal="up" style="--reveal-delay: 100ms" class="bg-slate-100 p-6">
-                        <div data-counter="3" data-counter-duration="850" class="text-3xl font-black text-[#FFA729]">3</div>
+                        <div data-counter="10" data-counter-duration="850" class="text-3xl font-black text-[#FFA729]">10</div>
                         <p class="mt-2 font-bold text-[#081a43]">Drilling teams</p>
                     </div>
                 </div>

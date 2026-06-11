@@ -12,17 +12,17 @@
                 <p class="inline-block border-2 border-[#FFA729] px-4 py-2 text-sm font-black uppercase text-[#FFA729]">Get In Touch</p>
                 <h1 class="mt-6 text-3xl font-black uppercase leading-tight text-[#081a43] sm:text-4xl">Start with the right ground information</h1>
                 <div class="mt-8 space-y-5">
-                    <a href="tel:+255760594570" class="flex gap-4 border border-slate-200 p-5 transition hover:border-[#FFA729]">
+                    <a href="tel:{{ preg_replace('/[^0-9+]/', '', $siteSettings['phone_primary']) }}" class="flex gap-4 border border-slate-200 p-5 transition hover:border-[#FFA729]">
                         <i class="fas fa-phone mt-1 text-2xl text-[#FFA729]" aria-hidden="true"></i>
-                        <span><strong class="block text-[#081a43]">Phone</strong>+255 760 594 570 / +255 760 044 560</span>
+                        <span><strong class="block text-[#081a43]">Phone</strong>{{ $siteSettings['phone_primary'] }} / {{ $siteSettings['phone_secondary'] }}</span>
                     </a>
-                    <a href="mailto:projects@easterngeotechnics.co.tz" class="flex gap-4 border border-slate-200 p-5 transition hover:border-[#FFA729]">
+                    <a href="mailto:{{ $siteSettings['email'] }}" class="flex gap-4 border border-slate-200 p-5 transition hover:border-[#FFA729]">
                         <i class="fas fa-envelope mt-1 text-2xl text-[#FFA729]" aria-hidden="true"></i>
-                        <span><strong class="block text-[#081a43]">Email</strong>projects@easterngeotechnics.co.tz</span>
+                        <span class="min-w-0 break-all"><strong class="block text-[#081a43]">Email</strong>{{ $siteSettings['email'] }}</span>
                     </a>
                     <div class="flex gap-4 border border-slate-200 p-5">
                         <i class="fas fa-location-dot mt-1 text-2xl text-[#FFA729]" aria-hidden="true"></i>
-                        <span><strong class="block text-[#081a43]">Address</strong>P.O. Box 22215, Dar es Salaam, Tanzania</span>
+                        <span><strong class="block text-[#081a43]">Address</strong>{{ $siteSettings['address'] }}</span>
                     </div>
                 </div>
             </div>
@@ -74,6 +74,9 @@
                         @error('message') <p class="mt-2 text-sm text-red-700">{{ $message }}</p> @enderror
                         @error('form_token') <p class="mt-2 text-sm text-red-700">{{ $message }}</p> @enderror
                     </div>
+                    <p class="sm:col-span-2 text-[13px] leading-6 text-slate-500">
+                        Your details will only be used to respond to this inquiry and coordinate requested services. We do not sell or share inquiry information for marketing.
+                    </p>
                     <button type="submit" class="sm:col-span-2 inline-flex justify-center bg-[#FFA729] px-7 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white transition hover:bg-[#D98200]">Send Inquiry</button>
                 </div>
             </form>
